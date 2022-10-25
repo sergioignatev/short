@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @media (max-width:700px) {
+    body{display:grid;
+  grid-template-columns: auto;
+  
+  }
+    
+  }
+    #time{display: none;}
+    #back{display: none;color:blue}
+    #label{display:none}
+    #label1{display:none}
+
+</style>
+</head>
+<body>
+    <select onchange="Vis()" name="route" id="route">
+        <option value="destination">Направление</option>
+        <option value="из A в B">из A в B</option>
+        <option value="из B в A">из B в A</option>
+        <option value="из A в B и обратно в А">из A в B и обратно в А</option>
+      </select>
+
+      <label id="label1" for="time">Выберите время из А в В</label>
+      <select name="time" id="time">
+        <option value=""></option>
+        <option value="18:00(из A в B)">18:00(из A в B)</option>
+        <option value="18:30(из A в B)">18:30(из A в B)</option>
+        <option value="18:45(из A в B)">18:45(из A в B)</option>
+        <option value="19:00(из A в B)">19:00(из A в B)</option>
+        <option value="19:15(из A в B)">19:15(из A в B)</option>
+        <option value="21:00(из A в B)">21:00(из A в B)</option>
+ 
+      </select>
+      <label id="label" for="back">Выберите время из В в А</label>
+      <select name="back" id="back">
+        
+        <option value=""></option>
+      <option value="18:30(из B в A)">18:30(из B в A)</option>
+      <option value="18:45(из B в A)">18:45(из B в A)</option>
+      <option value="19:00(из B в A)">19:00(из B в A)</option>
+      <option value="19:15(из B в A)">19:15(из B в A)</option>
+      <option value="19:35(из B в A)">19:35(из B в A)</option>
+      <option value="21:50(из B в A)">21:50(из B в A)</option>
+      <option value="21:55(из B в A)">21:55(из B в A)</option>
+
+</select>
+     
+      <label for="num">Количество билетов</label>
+      <input min="1" type="number" value="1"  id="num">
+      <button  onclick="select()">Посчитать</button>
+
+
+
+
+
+
+
+
+
+
+
+      <script src="time.js"></script>
+<script src="scripts.js"></script>
+<script src="demo.js"></script>
+      <div id="demo"></div>
+</body>
+</html>
