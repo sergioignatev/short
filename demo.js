@@ -6,6 +6,7 @@ function cDest(){
     for(let i=0;i<collection.length;i++){
     collection[i].style.display='flex'
      }
+     back.value=""
      }
 
 
